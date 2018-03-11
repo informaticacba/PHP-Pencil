@@ -1,0 +1,27 @@
+<!DOCTYPE HMTL>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <h1>Pencil blog example</h1>
+    <ul>
+    {foreach $notes as $note}
+    <li>
+      <span>{$note->id}, </span><a href="http://localhost/pencil/blog/view/{$note->id}">{$note->title}</a>
+    </li>
+    {/foreach}
+  </ul>
+  <form action="http://localhost/pencil/blog/post" method="post">
+    <div>Title</div>
+    <input name="title" type="text">
+    <div>Body</div>
+    <textarea name="body"></textarea>
+    <br>
+    <input type="submit">
+  </form>
+</body>
+
+</html>

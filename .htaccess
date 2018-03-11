@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /pencil
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule !\.(pdf|ico|gif|jpg|png|css|html|xml)$ index.php
